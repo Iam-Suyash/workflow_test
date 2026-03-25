@@ -3,16 +3,19 @@ on:
   workflow_dispatch:
 jobs:
   code:
+    runs-on: ubuntu-22.04
     steps:
       - name: Clone code
         run: echo 'Clone code repo from Github'
 
   build:
+    runs-on: ubuntu-22.04
     steps:
       - name: Build code
         run: echo 'Build code using Docker'
 
   Deploy:
+    runs-on: ubuntu-22.04
     steps:
       - name: Deploy code
         run: echo 'Deploy code using  Kubernetes'
