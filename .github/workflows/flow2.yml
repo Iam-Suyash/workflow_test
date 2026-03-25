@@ -1,0 +1,20 @@
+name: cd/cd_pipeline
+on:
+  workflow_dispatch:
+jobs:
+  code:
+    steps:
+      - name: Clone code
+        run: echo 'Clone code repo from Github'
+
+  build:
+    steps:
+      - name: Build code
+        run: echo 'Build code using Docker'
+
+  Deploy:
+    steps:
+      - name: Deploy code
+        run: echo 'Deploy code using  Kubernetes'
+
+      
